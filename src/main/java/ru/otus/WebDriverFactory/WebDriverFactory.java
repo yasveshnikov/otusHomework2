@@ -13,28 +13,23 @@ public class WebDriverFactory {
         webDriverName = webDriverName.toUpperCase();
 
         if (webDriverName.equals(Browsers.CHROME.name())) {
-            WebDriverFactoryChrome chrome = new WebDriverFactoryChrome();
-            return chrome.create(options);
+            return new WebDriverFactoryChrome().create(options);
         }
 
         if (webDriverName.equals(Browsers.FIREFOX.name())) {
-            WebDriverFactoryFirefox firefox = new WebDriverFactoryFirefox();
-            return firefox.create(options);
+            return new WebDriverFactoryFirefox().create(options);
         }
 
         if (webDriverName.equals(Browsers.SAFARI.name())) {
-            WebDriverFactorySafari safari = new WebDriverFactorySafari();
-            return safari.create(options);
+            return new WebDriverFactorySafari().create(options);
         }
 
         if (webDriverName.equals(Browsers.OPERA.name())) {
-            WebDriverFactoryOpera opera = new WebDriverFactoryOpera();
-            return opera.create(options);
+            return new WebDriverFactoryOpera().create(options);
         }
 
         if (webDriverName.equals(Browsers.EDGE.name())) {
-            WebDriverFactoryEdge edge = new WebDriverFactoryEdge();
-            return edge.create(options);
+            return new WebDriverFactoryEdge().create(options);
         }
 
         return null;
